@@ -28,19 +28,49 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Open Quartus Prime and create a new project.
+
+2.Create a Verilog/VHDL file and write the 4-bit synchronous up counter code.
+
+3.Save and compile the code.
+
+4 Create a testbench and simulate the design.
+5.Assign pins using Pin Planner if using FPGA.
+
+6.Generate the programming file.
+
+7.Download to FPGA and check the output.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
-*/
+Developed by:GAYATHRI K
+RegisterNumber:212223230061
+```
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 
 **RTL LOGIC UP COUNTER**
+![image](https://github.com/user-attachments/assets/875764d3-331a-419b-9dc8-b3687d1d5e01)
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+![image](https://github.com/user-attachments/assets/a2b73291-44ab-48bc-a9d8-c16736072bfd)
+
 
 **TRUTH TABLE**
+![image](https://github.com/user-attachments/assets/b07a7f77-d8db-4e06-bc3f-a8086a3e879e)
+
 
 **RESULTS**
+Thus the program executed successfully.
